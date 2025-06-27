@@ -61,9 +61,37 @@
             background-color: #fffaf5;
             border-left: 4px solid #d69e2e; /* amber-700 */
         }
+        /* Music player button style */
+        #music-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #c05621; /* amber-800 */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
     </style>
 </head>
 <body class="text-gray-800">
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="https://www.mboxdrive.com/Mangalayam.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="music-toggle">
+        <i id="music-icon" class="fas fa-play"></i>
+    </button>
 
     <!-- Hero Section -->
     <section class="hero-section h-screen flex flex-col items-center justify-center text-white relative">
@@ -93,14 +121,14 @@
                 <!-- Bride -->
                 <div class="text-center" data-aos="fade-right" data-aos-duration="1000">
                     <img src="https://i.postimg.cc/gcxHYq2g/Whats-App-Image-2025-06-28-at-12-38-18-AM.jpg" alt="Divya, the bride" class="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover mx-auto border-4 border-amber-100 shadow-lg">
-                    <h3 class="font-playfair text-3xl mt-6">Divya</h3>
-                    <p class="text-gray-500 mt-2">Daughter of Mr. M. Surya Narayana & Ms. M Revathi</p>
+                    <h3 class="font-playfair text-3xl mt-6">Chi. Sou. Divya</h3>
+                    <p class="text-gray-500 mt-2">D/o. Smt. Revathi & sri Surya Narayana</p>
                 </div>
                 <!-- Groom -->
                 <div class="text-center" data-aos="fade-left" data-aos-duration="1000">
                     <img src="https://i.postimg.cc/cC7HsbgK/Whats-App-Image-2025-06-28-at-12-55-54-AM.jpg" alt="Rohit Rishi, the groom" class="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover mx-auto border-4 border-amber-100 shadow-lg">
-                    <h3 class="font-playfair text-3xl mt-6">Rohit Rishi</h3>
-                    <p class="text-gray-500 mt-2">Son of Mr. M. Srinivasa Rao & Ms. Y. Naga Pushpa Latha</p>
+                    <h3 class="font-playfair text-3xl mt-6">Chi. Rohit Rishi</h3>
+                    <p class="text-gray-500 mt-2">S/o. Smt. Naga Pushpa Latha & Sri Srinivasa Rao</p>
                 </div>
             </div>
         </div>
@@ -164,6 +192,28 @@
         </div>
     </section>
     
+    <!-- Guest Accommodations Section -->
+    <section id="accommodations" class="py-20 px-6 bg-amber-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-great-vibes text-5xl md:text-7xl text-amber-800 mb-6" data-aos="fade-up">Guest Accommodations</h2>
+            <p class="text-lg md:text-xl leading-relaxed text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">
+                For our out-of-town guests, we have arranged accommodations. Please feel free to reach out for any assistance.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <i class="fas fa-phone-alt text-3xl text-amber-800 mb-3"></i>
+                    <h3 class="font-playfair text-2xl font-semibold text-amber-900">Surya</h3>
+                    <a href="tel:6300057593" class="text-lg text-gray-700 hover:text-amber-800 transition-colors">6300057593</a>
+                </div>
+                 <div class="text-center">
+                     <i class="fas fa-phone-alt text-3xl text-amber-800 mb-3"></i>
+                    <h3 class="font-playfair text-2xl font-semibold text-amber-900">Pradeep</h3>
+                    <a href="tel:9014146464" class="text-lg text-gray-700 hover:text-amber-800 transition-colors">9014146464</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Wishes Form Section -->
     <section id="wishes" class="py-20 px-6 bg-white">
         <div class="max-w-4xl mx-auto text-center">
@@ -321,6 +371,37 @@
         AOS.init({
             once: true, // Whether animation should happen only once - while scrolling down
             mirror: false, // Whether elements should animate out while scrolling past them
+        });
+        
+        // Music toggle script (FIXED)
+        const musicToggle = document.getElementById('music-toggle');
+        const music = document.getElementById('bg-music');
+        const musicIcon = document.getElementById('music-icon');
+
+        musicToggle.addEventListener('click', () => {
+            // Disable the button to prevent rapid clicks which causes the error
+            musicToggle.disabled = true;
+
+            if (music.paused) {
+                const playPromise = music.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(_ => {
+                        // Playback started successfully.
+                        musicIcon.classList.remove('fa-play');
+                        musicIcon.classList.add('fa-pause');
+                        musicToggle.disabled = false; // Re-enable button
+                    }).catch(error => {
+                        // Autoplay was prevented.
+                        console.error("Music play was prevented:", error);
+                        musicToggle.disabled = false; // Re-enable button
+                    });
+                }
+            } else {
+                music.pause();
+                musicIcon.classList.remove('fa-pause');
+                musicIcon.classList.add('fa-play');
+                musicToggle.disabled = false; // Re-enable button
+            }
         });
     </script>
 </body>
