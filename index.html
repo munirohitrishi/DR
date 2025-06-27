@@ -32,16 +32,34 @@
             font-family: 'Playfair Display', serif;
         }
         .hero-section {
-            background-image: url('https://placehold.co/1200x800/e2e8f0/64748b?text=Divya+%26+Rohit');
+            background-image: url('https://i.postimg.cc/RZzBgyKn/Whats-App-Image-2025-06-27-at-11-56-12-PM.jpg'); /* Updated background image */
             background-size: cover;
             background-position: center;
         }
         .text-shadow-custom {
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            /* Increased shadow intensity for better visibility */
+            text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.9);
         }
         .card-bg {
              background-color: rgba(255, 255, 255, 0.8);
              backdrop-filter: blur(10px);
+        }
+        /* Style for gallery images to ensure they are consistent */
+        .gallery-img {
+            width: 100%;
+            height: 300px; /* Or a specific height you prefer */
+            object-fit: cover;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+        /* Styles for the wishes form and display */
+        .wish-card {
+            background-color: #fffaf5;
+            border-left: 4px solid #d69e2e; /* amber-700 */
         }
     </style>
 </head>
@@ -74,15 +92,15 @@
             <div class="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-20">
                 <!-- Bride -->
                 <div class="text-center" data-aos="fade-right" data-aos-duration="1000">
-                    <img src="https://placehold.co/300x300/f3e8ff/8b5cf6?text=Divya" alt="Bride" class="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover mx-auto border-4 border-amber-100 shadow-lg">
+                    <img src="https://i.postimg.cc/gcxHYq2g/Whats-App-Image-2025-06-28-at-12-38-18-AM.jpg" alt="Divya, the bride" class="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover mx-auto border-4 border-amber-100 shadow-lg">
                     <h3 class="font-playfair text-3xl mt-6">Divya</h3>
-                    <p class="text-gray-500 mt-2">Daughter of Mr. M. Surya Narayana</p>
+                    <p class="text-gray-500 mt-2">Daughter of Mr. M. Surya Narayana & Ms. M Revathi</p>
                 </div>
                 <!-- Groom -->
                 <div class="text-center" data-aos="fade-left" data-aos-duration="1000">
-                    <img src="https://placehold.co/300x300/e0f2fe/0ea5e9?text=Rohit" alt="Groom" class="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover mx-auto border-4 border-amber-100 shadow-lg">
+                    <img src="https://i.postimg.cc/cC7HsbgK/Whats-App-Image-2025-06-28-at-12-55-54-AM.jpg" alt="Rohit Rishi, the groom" class="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover mx-auto border-4 border-amber-100 shadow-lg">
                     <h3 class="font-playfair text-3xl mt-6">Rohit Rishi</h3>
-                    <p class="text-gray-500 mt-2">Son of Mr. M. Srinivasa Rao</p>
+                    <p class="text-gray-500 mt-2">Son of Mr. M. Srinivasa Rao & Ms. Y. Naga Pushpa Latha</p>
                 </div>
             </div>
         </div>
@@ -111,9 +129,9 @@
                         </a>
                     </div>
                 </div>
-                <!-- Wedding Ceremony Card -->
+                <!-- Muhurtham Card -->
                 <div class="card-bg border border-amber-200 rounded-xl p-8 shadow-lg text-center" data-aos="zoom-in-up">
-                    <h3 class="font-playfair text-3xl font-semibold mb-4 text-amber-900">Wedding Ceremony</h3>
+                    <h3 class="font-playfair text-3xl font-semibold mb-4 text-amber-900">Muhurtham</h3>
                     <p class="text-lg text-gray-600"><i class="far fa-calendar-alt mr-2"></i>Friday, 15th August 2025</p>
                     <p class="text-lg text-gray-600 mt-2"><i class="far fa-clock mr-2"></i>3:13 AM (IST)</p>
                      <div class="mt-4 text-gray-700">
@@ -124,7 +142,7 @@
                         <a href="https://maps.app.goo.gl/e8bWpnCUsYC6eNPs5" target="_blank" class="inline-block bg-amber-800 text-white py-3 px-6 rounded-lg hover:bg-amber-900 transition-colors duration-300">
                             <i class="fas fa-map-marker-alt mr-2"></i>View on Map
                         </a>
-                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding%20Ceremony%3A%20Divya%20%26%20Rohit%20Rishi&dates=20250814T214300Z/20250814T234300Z&details=Join%20us%20for%20the%20wedding%20ceremony%20of%20Divya%20%26%20Rohit%20Rishi.&location=Santhi%20Convention,%20Kotha%20Road%20Junction,%20Srikakulam,%20532001" target="_blank" class="inline-block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Muhurtham%3A%20Divya%20%26%20Rohit%20Rishi&dates=20250814T214300Z/20250814T234300Z&details=Join%20us%20for%20the%20muhurtham%20of%20Divya%20%26%20Rohit%20Rishi.&location=Santhi%20Convention,%20Kotha%20Road%20Junction,%20Srikakulam,%20532001" target="_blank" class="inline-block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">
                            <i class="far fa-calendar-plus mr-2"></i>Add to Calendar
                         </a>
                     </div>
@@ -136,23 +154,51 @@
     <!-- Gallery Section -->
     <section class="py-20 px-6">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="font-great-vibes text-5xl md:text-7xl text-amber-800 mb-12" data-aos="fade-up">Our Moments</h2>
+            <h2 class="font-great-vibes text-5xl md:text-7xl text-amber-800 mb-12" data-aos="fade-up">Kalyanam</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div data-aos="zoom-in" data-aos-delay="100"><img src="https://placehold.co/400x400/fff0f5/db2777?text=Memory+1" alt="Gallery image 1" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300"></div>
-                <div data-aos="zoom-in" data-aos-delay="200"><img src="https://placehold.co/400x400/f0f9ff/0284c7?text=Memory+2" alt="Gallery image 2" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300"></div>
-                <div data-aos="zoom-in" data-aos-delay="300"><img src="https://placehold.co/400x400/f7fee7/65a30d?text=Memory+3" alt="Gallery image 3" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300"></div>
-                <div data-aos="zoom-in" data-aos-delay="400"><img src="https://placehold.co/400x400/faf5ff/9333ea?text=Memory+4" alt="Gallery image 4" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300"></div>
+                <div data-aos="zoom-in" data-aos-delay="100"><img src="https://i.postimg.cc/yxHFW72T/521981772.jpg" alt="Our Moment 1" class="gallery-img"></div>
+                <div data-aos="zoom-in" data-aos-delay="200"><img src="https://i.postimg.cc/W1bwMbzW/images.jpg" alt="Our Moment 2" class="gallery-img"></div>
+                <div data-aos="zoom-in" data-aos-delay="300"><img src="https://i.postimg.cc/bv40cxTW/f64d1a3b9548c432ddd1888e4b9c9836.jpg" alt="Our Moment 3" class="gallery-img"></div>
+                <div data-aos="zoom-in" data-aos-delay="400"><img src="https://i.postimg.cc/rsN5rvk2/56e3c795e052e2eb30b7be8637ad53a3.jpg" alt="Our Moment 4" class="gallery-img"></div>
             </div>
         </div>
     </section>
     
-    <!-- Wishes Section -->
-    <section class="py-20 px-6 bg-white text-center">
-         <div class="max-w-4xl mx-auto">
-            <h2 class="font-great-vibes text-5xl md:text-7xl text-amber-800 mb-4" data-aos="fade-up">Best Wishes</h2>
-            <p class="text-lg text-gray-600 mb-8" data-aos-delay="100" data-aos="fade-up">Your blessings are the most precious gift to us.</p>
-            <p class="text-2xl font-playfair" data-aos-delay="200" data-aos="fade-up">We can't wait to celebrate with you!</p>
-         </div>
+    <!-- Wishes Form Section -->
+    <section id="wishes" class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-great-vibes text-5xl md:text-7xl text-amber-800 mb-4" data-aos="fade-up">Send Your Wishes</h2>
+            <p class="text-lg text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">Your blessings are the most precious gift to us.</p>
+            
+            <!-- Wish Form -->
+            <form id="wish-form" class="max-w-xl mx-auto text-left space-y-4" data-aos="fade-up" data-aos-delay="200">
+                <div>
+                    <label for="wisher-name" class="block text-sm font-medium text-gray-700">Your Name</label>
+                    <input type="text" id="wisher-name" class="mt-1 block w-full px-4 py-2 bg-amber-50 border border-amber-200 rounded-lg shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500" required>
+                </div>
+                <div>
+                    <label for="wish-message" class="block text-sm font-medium text-gray-700">Your Message</label>
+                    <textarea id="wish-message" rows="4" class="mt-1 block w-full px-4 py-2 bg-amber-50 border border-amber-200 rounded-lg shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="inline-block bg-amber-800 text-white font-semibold py-3 px-8 rounded-lg hover:bg-amber-900 transition-colors duration-300">
+                        <i class="fas fa-paper-plane mr-2"></i>Send Wish
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Guestbook / Wishes Display Section -->
+    <section id="guestbook" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-great-vibes text-5xl md:text-7xl text-amber-800 mb-12" data-aos="fade-up">Messages of Love</h2>
+            <!-- Display Wishes -->
+            <div id="wishes-container" class="space-y-6 text-left">
+                <!-- Wishes will be dynamically inserted here -->
+                <div class="text-center text-gray-500" id="loading-wishes">Loading wishes...</div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -161,6 +207,114 @@
         <p class="text-sm text-amber-800 mt-2">Made with <i class="fas fa-heart text-red-500"></i> by a loving friend</p>
     </footer>
 
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getFirestore, collection, addDoc, query, onSnapshot, serverTimestamp, orderBy } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        
+        // Your web app's Firebase configuration
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : { apiKey: "your-fallback-api-key", authDomain: "your-fallback-auth-domain", projectId: "your-fallback-project-id" };
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-wedding-app';
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+        
+        // Sign in anonymously to allow writing to the database
+        signInAnonymously(auth).catch((error) => {
+            console.error("Anonymous sign-in failed:", error);
+        });
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in, you can now set up listeners.
+                setupWishesListener();
+            } else {
+                // User is signed out.
+                console.log("User is signed out.");
+            }
+        });
+
+
+        // Reference to the 'wishes' collection
+        const wishesCollection = collection(db, `/artifacts/${appId}/public/data/wishes`);
+
+        // Handle form submission
+        const wishForm = document.getElementById('wish-form');
+        wishForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const nameInput = document.getElementById('wisher-name');
+            const messageInput = document.getElementById('wish-message');
+            
+            const name = nameInput.value.trim();
+            const message = messageInput.value.trim();
+
+            if (name && message) {
+                try {
+                    await addDoc(wishesCollection, {
+                        name: name,
+                        message: message,
+                        createdAt: serverTimestamp()
+                    });
+                    // Clear the form
+                    nameInput.value = '';
+                    messageInput.value = '';
+                    // Optional: Show a success message
+                    alert('Your wish has been sent! Thank you!');
+                } catch (error) {
+                    console.error("Error adding document: ", error);
+                    alert("There was an error sending your wish. Please try again.");
+                }
+            }
+        });
+        
+        // Listen for real-time updates and display wishes
+        function setupWishesListener() {
+            const wishesContainer = document.getElementById('wishes-container');
+            const loadingIndicator = document.getElementById('loading-wishes');
+            
+            // Query to order wishes by creation date, newest first
+            const q = query(wishesCollection, orderBy("createdAt", "desc"));
+
+            onSnapshot(q, (snapshot) => {
+                if (snapshot.empty) {
+                    wishesContainer.innerHTML = '<p class="text-center text-gray-500">Be the first to send a wish!</p>';
+                } else {
+                     // Clear existing wishes
+                    wishesContainer.innerHTML = '';
+                    snapshot.forEach(doc => {
+                        const wish = doc.data();
+                        const wishElement = document.createElement('div');
+                        wishElement.classList.add('wish-card', 'p-4', 'rounded-lg', 'shadow-sm');
+                        wishElement.setAttribute('data-aos', 'fade-up');
+                        
+                        const messageP = document.createElement('p');
+                        messageP.classList.add('text-gray-700', 'italic');
+                        messageP.textContent = `"${wish.message}"`;
+                        
+                        const nameP = document.createElement('p');
+                        nameP.classList.add('text-right', 'font-semibold', 'text-amber-800', 'mt-2');
+                        nameP.textContent = `- ${wish.name}`;
+                        
+                        wishElement.appendChild(messageP);
+                        wishElement.appendChild(nameP);
+                        
+                        wishesContainer.appendChild(wishElement);
+                    });
+                     // Re-initialize AOS to animate new elements
+                    AOS.refresh();
+                }
+            }, (error) => {
+                console.error("Error getting wishes: ", error);
+                wishesContainer.innerHTML = '<p class="text-center text-red-500">Could not load wishes at this time.</p>';
+            });
+        }
+    </script>
+    
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
